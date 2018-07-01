@@ -1,4 +1,4 @@
-(defproject libdev/clj-template "0.2.0-SNAPSHOT"
+(defproject libdev/clj-template "0.2.0"
   :description "A clj-new template for building Clojure libraries with bespoke a dev environment & tooling"
   :url "https://github.com/RickMoynihan/libdev"
   :license {:name "Eclipse Public License"
