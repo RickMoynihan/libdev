@@ -10,6 +10,18 @@ The main difference over `clj-new`'s standard template is the
 inclusion of an `env/dev` source path, that can contain bespoke
 tooling to help develop a library.
 
+We also setup a `:gen` alias that you can use to generate extra
+templates within the project.
+
+e.g. to add leiningen build support run the command:
+
+`$ clj -A:gen project=group-name/project-name`
+
+This will install leiningen configured with the
+[lein-tools-deps](https://github.com/RickMoynihan/lein-tools-deps)
+plugin, so you can use leiningen to build and deploy your `tools.deps`
+project.
+
 ## Example Usage
 
 Assuming you have installed `clj-new` in a `:new` alias, then you can

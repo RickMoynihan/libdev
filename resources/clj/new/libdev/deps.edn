@@ -1,14 +1,13 @@
 {:paths ["resources" "src"]
  :deps {;integrant/integrant {:mvn/version "0.7.0-alpha2"}
-        org.clojure/clojure {:mvn/version "RELEASE"}
-
-        seancorfield/clj-new
-        {:git/url "https://github.com/seancorfield/clj-new"
-         :sha "492bb2e7ad7373a8b5958124a86cddc4c7a123d5"}}
+        org.clojure/clojure {:mvn/version "RELEASE"}}
 
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {org.clojure/test.check {:mvn/version "RELEASE"}}}
+
+  :gen {:extra-deps {libdev/clj-template {:mvn/version "RELEASE"}}
+        :main-opts ["-m" "clj-new.generate"]}
 
   :runner
   {:extra-deps {com.cognitect/test-runner
