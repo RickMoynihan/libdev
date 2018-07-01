@@ -1,0 +1,29 @@
+{:paths ["resources" "src"]
+ :deps {;integrant/integrant {:mvn/version "0.7.0-alpha2"}
+        org.clojure/clojure {:mvn/version "RELEASE"}}
+
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "RELEASE"}}}
+
+  :gen {:extra-deps {libdev/clj-template {:mvn/version "RELEASE"}}
+        :main-opts ["-m" "clj-new.generate"]}
+
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha "76568540e7f40268ad2b646110f237a60295fa3c"}}
+   :main-opts ["-m" "cognitect.test-runner"
+               "-d" "test"]}
+
+  :dev
+  {:extra-paths ["env/dev" "test"]
+   :extra-deps
+   {;integrant/repl {:mvn/version "0.3.1"}
+    org.clojure/tools.namespace {:mvn/version "0.2.11"}
+    org.clojure/test.check {:mvn/version "0.9.0"}
+    io.aviso/pretty {:mvn/version "0.1.34"}
+    spyscope {:mvn/version "0.1.6"}
+    fipp {:mvn/version "0.6.12"}
+
+    expound {:mvn/version "0.7.1"}}}}}
