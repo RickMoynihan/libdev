@@ -17,5 +17,4 @@
              ["env/dev/user.clj" (render "user.clj" data)]
              ["env/dev/dev.clj" (render "dev.clj" data)]
              ["deps.edn" (render "deps.edn" data)]
-             ["src/{{sanitized}}.clj" (render "foo.clj" data)]
              ["test/{{sanitized}}_test.clj" (render "test.clj" data)])))
