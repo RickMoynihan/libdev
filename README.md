@@ -1,6 +1,6 @@
 # libdev
 
-**WARNING: this is not safe for public consumption**
+[![Clojars Project](https://img.shields.io/clojars/v/libdev/clj-template.svg)](https://clojars.org/libdev/clj-template)
 
 A [clj-new](https://github.com/seancorfield/clj-new) template for
 building Clojure libraries that have a basic dev environment
